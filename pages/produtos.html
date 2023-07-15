@@ -11,7 +11,7 @@
     <title>Loja Virtual</title>
 </head>
 
-<body onload="carregar()">
+<body onload="produtos()">
 
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -37,22 +37,17 @@
                 </ul>
                 <form class="d-flex" role="search">
                     <input id="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <input id="buttonPesquisar" class="btn btn-success" type="button" value="Pesquisar"
-                        onclick="carregar()">
+                    <input id="buttonPesquisar" class="btn btn-success" type="button" value="Pesquisar">
                 </form>
             </div>
         </nav>
     </header>
 
     <div id="produtos-container">
-
         <div id="imagens-container"></div>
-        <div class="tets">
-            <h5 id="titulo"></h5>
-            <p id="preço"></p>
-            <a href="#"></a>
-        </div>
-
+        <h5 id="titulo"></h5>
+        <p id="preço"></p>
+        <a href="#"></a>
     </div>
 
 
