@@ -15,3 +15,7 @@
    border-radius: 0;
    --bs-card-border-color:none;
 }
+
+.modal-footer {
+    justify-content: flex-start;
+}

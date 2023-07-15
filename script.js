@@ -34,7 +34,7 @@ function produtos() {
         content += '<div class="card-body">';
         content += '<h5 class="card-title">' + produto.produto + '</h5>';
         content += '<p class="card-text">' + produto.preço + '</p>';
-        content += '<a href="#" class="btn btn-primary">Comprar</a>';
+        content += '<input id="buttonPesquisar" class="btn btn-primary" type="button" value="Adicionar"  onclick="adiciona()">';
         content += '</div>';
         content += '</div>';
     }
@@ -53,7 +53,7 @@ function pageFeminino() {
             content += '<div class="card-body">';
             content += '<h5 class="card-title">' + produto.produto + '</h5>';
             content += '<p class="card-text">' + produto.preço + '</p>';
-            content += '<a href="#" class="btn btn-primary">Comprar</a>';
+            content += '<input id="buttonPesquisar" class="btn btn-primary" type="button" value="Adicionar"  onclick="adiciona()">';
             content += '</div>';
             content += '</div>';
         }
@@ -72,7 +72,7 @@ function pageInfantil() {
             content += '<div class="card-body">';
             content += '<h5 class="card-title">' + produto.produto + '</h5>';
             content += '<p class="card-text">' + produto.preço + '</p>';
-            content += '<a href="#" class="btn btn-primary">Comprar</a>';
+            content += '<input id="buttonPesquisar" class="btn btn-primary" type="button" value="Adicionar"  onclick="adiciona()">';
             content += '</div>';
             content += '</div>';
         }
@@ -91,11 +91,16 @@ function pageMasculino() {
             content += '<div class="card-body">';
             content += '<h5 class="card-title">' + produto.produto + '</h5>';
             content += '<p class="card-text">' + produto.preço + '</p>';
-            content += '<a href="#" class="btn btn-primary">Comprar</a>';
+            content += '<input id="buttonPesquisar" class="btn btn-primary" type="button" value="Adicionar"  onclick="adiciona()">';
             content += '</div>';
             content += '</div>';
         }
     }
     document.getElementById('produtos-container').innerHTML = content;
 
+}
+
+
+function adiciona(){
+    alert('add')
 }
