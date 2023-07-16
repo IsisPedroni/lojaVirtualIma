@@ -18,4 +18,14 @@
 
 .modal-footer {
     justify-content: flex-start;
+} 
+
+#compras{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.card_Carrinho{
+    margin: 1em;
 }
