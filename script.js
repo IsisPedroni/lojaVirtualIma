@@ -124,6 +124,7 @@ function carrinho() {
         // style cardContainer
         cardContainer.style.display = "flex";
         cardContainer.style.flexWrap = "wrap";
+        cardContainer.style.margin = "2.5em";
 
         for (var i = 0; i < produtosCarrinho.length; i++) {
             var cardDiv = document.createElement("div");

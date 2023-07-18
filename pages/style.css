@@ -20,12 +20,13 @@
     justify-content: flex-start;
 } 
 
-#compras{
+/* #compras{
     display: flex;
     flex-wrap: wrap;
 
-}
+} */
 
 .card_Carrinho{
     padding: 1em;
+
 }
