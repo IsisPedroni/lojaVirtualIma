@@ -5,7 +5,6 @@ var vetorObj = [
     { 'cod': '4', 'preço': '111,50', 'produto': 'Camisa Bege', 'imagem': '../img/feminino/4.jpg', 'categoria': 'feminino' },
     { 'cod': '5', 'preço': '35,40', 'produto': 'Blusa estampada', 'imagem': '../img/feminino/5.jpg', 'categoria': 'feminino' },
     { 'cod': '6', 'preço': '140,50', 'produto': 'Camisa de trico', 'imagem': '../img/feminino/6.jpg', 'categoria': 'feminino' },
-    { 'cod': '4', 'preço': '111,50', 'produto': 'Camisa bonita', 'imagem': '../img/feminino/4.jpg', 'categoria': 'feminino' },
 
     { 'cod': '1', 'preço': '80,90', 'produto': 'Casaco Xadrez', 'imagem': '../img/masculino/1.jpg', 'categoria': 'masculino' },
     { 'cod': '2', 'preço': '131,20', 'produto': 'Camiseta preta', 'imagem': '../img/masculino/2.jpg', 'categoria': 'masculino' },
@@ -20,7 +19,6 @@ var vetorObj = [
     { 'cod': '4', 'preço': '189,00', 'produto': 'Blusa Dino', 'imagem': '../img/infantil/4.jpg', 'categoria': 'infantil' },
     { 'cod': '5', 'preço': '199,00', 'produto': 'Casoco Minnie', 'imagem': '../img/infantil/5.jpg', 'categoria': 'infantil' },
     { 'cod': '6', 'preço': '119,00', 'produto': 'Vestido onçado', 'imagem': '../img/infantil/6.jpg', 'categoria': 'infantil' },
-    { 'cod': '6', 'preço': '129,00', 'produto': 'Vestido', 'imagem': '../img/infantil/6.jpg', 'categoria': 'infantil' },
 ];
 
 //Pages
@@ -66,7 +64,7 @@ function pageInfantil() {
             content += '<div class="card" style="width: 17rem;">';
             content += '<img src="' + produto.imagem + '" class="card-img-top" alt="Imagem ' + produto.cod + '">';
             content += '<div class="card-body">';
-            content += '<h5 class="card-title">' + produto.produto + '</h5>';
+            content += '<h6 class="card-title">' + produto.produto + '</h6>';
             content += '<p class="card-text">' + produto.preço + '</p>';
             content += '<input id="buttonAdicionar" class="btn btn-primary" type="button" value="Adicionar"  onclick="adicionarAoCarrinho(' + i + ')">';
             content += '</div>';
@@ -124,7 +122,7 @@ function carrinho() {
         // style cardContainer
         cardContainer.style.display = "flex";
         cardContainer.style.flexWrap = "wrap";
-        cardContainer.style.margin = "2.5em";
+        cardContainer.style.marginLeft = "0.5em";
 
         for (var i = 0; i < produtosCarrinho.length; i++) {
             var cardDiv = document.createElement("div");
