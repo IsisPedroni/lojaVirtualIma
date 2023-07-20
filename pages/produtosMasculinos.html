@@ -8,13 +8,12 @@
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../script.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     <title>Loja Virtual</title>
 </head>
 
 <body onload="pageMasculino()">
-
-
+    
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
@@ -39,9 +38,10 @@
                 </ul>
 
                 <form class="d-flex" role="search">
-                    <input id="search" class="form-control me-2" type="search" placeholder="Pesquisar"
+                    <input id="search" class="form-control me-2" type="search" placeholder="Search"
                         aria-label="Pesquisar">
-                    <input id="buttonPesquisar" class="btn btn-success" type="button" value="Pesquisar">
+                    <input id="buttonPesquisar" class="btn btn-success" type="button" value="Pesquisar"
+                        onclick="pesquisar()">
                 </form>
             </div>
         </nav>
@@ -49,23 +49,51 @@
 
     <div id="produtos-container"></div>
 
-     <!-- Modal Carrinho -->
-     <div class="modal fade" id="modalCarrinho" tabindex="-1" aria-labelledby="modalCarrinhoLabel" aria-hidden="true">
+    <div class="modal fade" id="modalCarrinho" tabindex="-1" aria-labelledby="modalCarrinhoLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="modalCarrinhoLabel">Carrinho de Compras</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <p id="compras"></p>
-                </div>
+                <p id="compras"></p>
             </div>
         </div>
     </div>
 
+    <footer class="bg-color text-center">
+        <div class="container p-4 pb-0">
+            <section class="">
+                <form action="">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-auto">
+                            <p class="pt-2">
+                                <strong>Assine a nossa newsletter</strong>
+                            </p>
+                        </div>
+                        <div class="col-md-5 col-12">
+                            <!-- Email input -->
+                            <div class="form-outline mb-4">
+                                <input type="email" id="form5Example27" class="form-control"
+                                    placeholder="Digite seu Email" />
+                                <label class="form-label"></label>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-success">
+                                Sign up
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
 
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2023 Copyright
+        </div>
 
+    </footer>
 </body>
 
 </html>

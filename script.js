@@ -34,6 +34,7 @@ function produtos() {
         content += '<input id="buttonAdicionar" class="btn btn-primary" type="button" value="Adicionar"  onclick="adicionarAoCarrinho(' + i + ')">';
         content += '</div>';
         content += '</div>';
+        
     }
     document.getElementById('produtos-container').innerHTML = content;
 }
@@ -51,6 +52,8 @@ function pageFeminino() {
             content += '<input id="buttonAdicionar" class="btn btn-primary" type="button" value="Adicionar"  onclick="adicionarAoCarrinho(' + i + ')">';
             content += '</div>';
             content += '</div>';
+
+
         }
     }
     document.getElementById('produtos-container').innerHTML = content;
@@ -69,6 +72,7 @@ function pageInfantil() {
             content += '<input id="buttonAdicionar" class="btn btn-primary" type="button" value="Adicionar"  onclick="adicionarAoCarrinho(' + i + ')">';
             content += '</div>';
             content += '</div>';
+
         }
     }
     document.getElementById('produtos-container').innerHTML = content;
@@ -87,6 +91,7 @@ function pageMasculino() {
             content += '<input id="buttonAdicionar" class="btn btn-primary" type="button" value="Adicionar" onclick="adicionarAoCarrinho(' + i + ')" >';
             content += '</div>';
             content += '</div>';
+
         }
     }
     document.getElementById('produtos-container').innerHTML = content;
@@ -105,8 +110,6 @@ function adicionarAoCarrinho(index) {
         produto.quantidade = 1;
         produtosCarrinho.push(produto);
     }
-
-    // console.log("Produto adicionado ao carrinho: " + produto.produto);
 }
 
 function carrinho() {
@@ -156,3 +159,29 @@ function carrinho() {
         carrinhoCompras.appendChild(cardContainer);
     }
 }
+
+
+function pesquisar() {
+    var termoPesquisa = document.getElementById('search').value.toLowerCase();
+    var produtosFiltrados = vetorObj.filter((produto) =>
+        produto.produto.toLowerCase().includes(termoPesquisa)
+    );
+    renderizarProdutos(produtosFiltrados);
+}
+
+function renderizarProdutos(produtos) {
+    var content = '';
+    for (var i = 0; i < produtos.length; i++) {
+        var produto = produtos[i];
+        content += '<div class="card" style="width: 17rem;">';
+        content += '<img src="' + produto.imagem + '" class="card-img-top" alt="Imagem ' + produto.cod + '">';
+        content += '<div class="card-body">';
+        content += '<h5 class="card-title">' + produto.produto + '</h5>';
+        content += '<p class="card-text">' + produto.preço + '</p>';
+        content += '<input id="buttonAdicionar" class="btn btn-primary" type="button" value="Adicionar"  onclick="adicionarAoCarrinho(' + i + ')">';
+        content += '</div>';
+        content += '</div>';
+    }
+    document.getElementById('produtos-container').innerHTML = content;
+}
+
