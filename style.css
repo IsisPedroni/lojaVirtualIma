@@ -1,0 +1,36 @@
+#produtos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1em 2em;
+}
+
+.card-img, .card-img-top{
+    border-radius: 0;
+}
+
+.card{
+   margin: 1em;
+   text-align: center;
+   border-radius: 0;
+   --bs-card-border-color:none;
+}
+
+.modal-footer {
+    justify-content: flex-start;
+} 
+
+.card_Carrinho{
+    padding: 1em;
+
+}
+
+.modal-content{
+    width: 80%;
+}
+
+.bg-color{
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-tertiary-bg-rgb),var(--bs-bg-opacity))!important;
+    
+}
